@@ -1,0 +1,857 @@
+<!------------------------------------ SNS Starting space ------------------------------------>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- insta font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+  rel="stylesheet"
+/>
+<!-- facebook font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:wght@600&family=Oswald:wght@700&family=Passion+One&display=swap"
+  rel="stylesheet"
+/>
+<!-- youtube font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+  rel="stylesheet"
+/>
+<style>
+/* ---------------------facebook--------------------- */
+/* 공통 스타일 */
+#facebook_area {
+  background: #3c589f;
+  text-align: center;
+}
+
+#facebook_area {
+  position: relative;
+  top: 1100px;
+}
+
+@media screen and (max-width: 768px) {
+	#facebook_area {
+		top: 0;
+	}
+}
+
+
+.facebook_contents {
+  padding: 0 0 50px 0;
+}
+
+/* facebook title */
+.facebook_title h2 {
+  color: white;
+  font-size: 50px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* facebook contents */
+.post-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  border-radius: 5px;
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+ .post-container {
+ 	filter: brightness(100%);
+ }
+}
+
+/* img */
+.post-container img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2px 2px 0px 0px;
+}
+
+/* time */
+.post-container .time {
+  color: gray;
+  background: white;
+  font-size: 10px;
+  text-align: right;
+  padding: 10px 10px 0px 0px;
+  /* padding-right: 10px; */
+}
+
+/* content */
+.post-container .content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  color: black;
+  background: white;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px 8px 8px 8px;
+  -webkit-line-clamp: 3;
+}
+
+/* container hover */
+.post-container:hover {
+  filter: brightness(100%);
+}
+
+/* content more button */
+.post-button {
+  color: #3c589f;
+}
+
+.post-button:hover {
+  text-decoration: underline;
+}
+
+/* slick 설정 */
+
+.slick-slider {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.slick-round-btn {
+  border-radius: 50%;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.slick-round-btn:hover {
+  background-color: gray;
+}
+
+/* 웹 버전 슬라이드 버튼 크기 */
+#facebook-feed .slick-prev img,
+#facebook-feed .slick-next img {
+  width: 150px;
+  height: 20px;
+}
+
+/* 모바일 버전 슬라이드 버튼 크기 */
+@media screen and (max-width: 768px) {
+  #facebook-feed .slick-prev img,
+  #facebook-feed .slick-next img {
+    width: 450px;
+    height: 20px;
+  }
+} 
+/* ---------------------instagram--------------------- */
+/* 공통 */
+#instagram_area {
+  position: relative;
+  top: 1060px;
+  background: radial-gradient(
+      circle farthest-corner at 32% 106%,
+      #ffe17d 0%,
+      #ffcd69 10%,
+      #fa9137 28%,
+      #eb4141 42%,
+      transparent 82%
+    ),
+    linear-gradient(135deg, #234bd7 12%, #c33cbe 58%);
+}
+
+@media screen and (max-width: 768px) {
+	#instagram_area {
+		top: -40px;
+	}
+}
+
+/* instagram title */
+.instagram_title h2 {
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: "Lobster", sans-serif;
+}
+/* instagram contents */
+.instagram_contents {
+  padding: 0 0 50px 0;
+}
+
+#instagram-feed {
+  display: flex;
+  justify-content: center;
+  box-sizing: content-box;
+}
+
+.insta-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 내용(작성시간, 텍스트) */
+.caption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 0px 8px 8px 8px;
+  -webkit-line-clamp: 3;
+}
+
+/* 작성시간 */
+.timestamp {
+  color: gray;
+  font-size: 10px;
+  text-align: right;
+  padding: 10px 0px 0px 0px;
+}
+
+/* 텍스트 */
+.caption a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 이미지 크기 및 여백 설정 */
+.insta-image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 4px;
+  box-sizing: border-box;
+  background-color: white;
+  filter: brightness(50%);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .insta-image-container {
+  	filter: brightness(100%);
+  }
+}
+
+.insta-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하며 채우기 */
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px;
+  background-color: white;
+}
+/* hover 효과 설정 */
+.insta-image-container:hover {
+  border-radius: 5px;
+  filter: brightness(100%); /*이미지의 밝기 조절 */
+}
+
+/* 텍스트 더보기 버튼 */
+.read-more-button {
+  cursor: pointer;
+  color: #3c589f;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+.read-more-button a:hover {
+  text-decoration: none;
+}
+
+/* slick 설정 */
+.slick-slider {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.slick-round-btn {
+  border-radius: 50%;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.slick-round-btn:hover {
+  background-color: gray;
+}
+
+/* 웹 버전 슬라이드 버튼 크기 */
+#instagram-feed .slick-prev img,
+#instagram-feed .slick-next img {
+  width: 150px;
+  height: 20px;
+}
+
+/* 모바일 버전 슬라이드 버튼 크기 */
+@media screen and (max-width: 768px) {
+  #instagram-feed .slick-prev img,
+  #instagram-feed .slick-next img {
+    width: 400px;
+    height: 20px;
+  }
+} 
+/* ---------------------youtube---------------------  */
+
+#youtube_area {
+  position: relative;
+  top: 1020px;
+  background-color: red;
+}
+
+@media screen and (max-width: 768px) {
+	#youtube_area {
+		top: -80px;
+	}
+}
+
+/* youtube title */
+.youtube_title h2 {
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+/* youtube contents */
+.youtube_contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 50px 0;
+}
+
+#videos-container {
+  display: flex;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  /* margin: 10px; */
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  width: 500px;
+  height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .video-container {
+    width: 600px;
+    height: 200px;
+  }
+}
+
+/* slick 설정 */
+
+.slick-slider {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.slick-round-btn {
+  border-radius: 50%;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent !important;
+}
+
+.slick-round-btn:hover {
+  background-color: gray;
+}
+
+/* 웹 버전 슬라이드 버튼 크기 */
+#videos-container .slick-prev img,
+#videos-container .slick-next img {
+  width: 100px;
+  height: 20px;
+}
+
+/* 모바일 버전 슬라이드 버튼 크기 */
+@media screen and (max-width: 768px) {
+  #videos-container .slick-prev img,
+  #videos-container .slick-next img {
+    width: 200px;
+    height: 20px;
+  }
+} 
+
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+<div id="facebook_area">
+  <div class="facebook_title">
+    <h2 align="center">Facebook</h2>
+  </div>
+  <div class="facebook_contents" align="center">
+	<div id="facebook-feed" class="slick-slider" style="overflow-x: hidden"></div>
+	   <script>
+			// 작성시간표시함수	   
+			 function getTimeDifferenceString(postTime) {
+			   const now = new Date();
+			   const postDate = new Date(postTime);
+			   const timeDifference = now - postDate;
+			   const minutesDifference = Math.floor(timeDifference / (1000 * 60));
+   
+			   if (minutesDifference < 60) {
+				 if (minutesDifference === 0) {
+				   return "방금 전";
+				 } else {
+				   return `${minutesDifference}분 전`;
+				 }
+			   } else {
+				 const hoursDifference = Math.floor(
+				   timeDifference / (1000 * 60 * 60)
+				 );
+   
+				 if (hoursDifference < 24) {
+				   return `${hoursDifference}시간 전`;
+				 } else {
+				   const daysDifference = Math.floor(
+					 timeDifference / (1000 * 60 * 60 * 24)
+				   );
+   
+				   if (daysDifference === 1) {
+					 return "어제";
+				   } else {
+					 return `${daysDifference}일 전`;
+				   }
+				 }
+			   }
+			 }
+			 // facebook feed upload
+			 function updateFacebookFeed() {
+			   var pageId = "216684361876104";
+			   var accessToken =
+				 "EABhi7JQQ3vkBOZBVGqDKBtOKkA4aWoEZB9pr2NLfMSufysBj4KAzQQ0AfshykVD5lJzvBHvmzeL6BWDNYdgkZCbLGXS7yfciG30EmO3NOpK6JpyNhJ7jsqsjJZC7ilge9biGskClgKZBVvnnOWqVLHXSUJ99RWEnGyVVAy0ZCG07F8EtFdPtuS1AE1PrSYYHcZD";
+			
+			$.ajax({
+				url: `https://graph.facebook.com/v18.0/${pageId}/posts`,
+				method: "GET",
+				data: {                
+					fields: "created_time,message,message_tags,full_picture,id",
+					access_token: accessToken,
+					limit: 16,
+				},
+				success: function (data) {
+					var feedContainer = $("#facebook-feed");
+					feedContainer.empty(); // 기존 내용 비우기
+   
+					for(var i = 0; i < data.data.length; i++) {
+						var post = data.data[i];
+						var postContainer = $("<div>").addClass("post-container");
+   
+						// 이미지가 있는 경우에만 이미지 추가
+						if(post.full_picture) {
+							var imageElement = $("<img>").attr(
+								"src",
+								post.full_picture
+							);
+   
+							// IIFE 를 사용하여 클로저 생성
+							(function (postId) {
+								imageElement.click(function () {
+									window.open("https://www.facebook.com/" + postId, "_blank");
+								});
+							})(post.id);
+   
+							postContainer.append(imageElement);
+						}
+   
+						// 작성 시간 추가
+						if(post.created_time) {
+							var timeDifferenceString = getTimeDifferenceString(post.created_time);
+							var timeElement = $("<div>")
+							.addClass("time")
+							.text(timeDifferenceString);
+   
+							postContainer.append(timeElement);
+						}
+   
+						// 텍스트 추가
+						if(post.message) {
+							var messageLines = post.message.replace(/(\S)/, "\n$1").split("\n");
+							// 가져올 텍스트 수
+							var linesToDisplay = 5;
+							// 처음부터 지정된 줄 수까지의 텍스트 가져오기
+							var truncatedMessage = messageLines.slice(0, linesToDisplay).join("<br>");
+   
+							// 텍스트를 표시하는 부분 수정
+							var postContent = $("<div>").addClass("content").html(truncatedMessage + "..." + '<div type="button" class="post-button">더보기</div>');
+   
+							(function (postId) {
+								postContent.click(function () {
+								 window.open(
+									"https://www.facebook.com/" + postId,
+									"_blank"
+								);
+							  });
+							})(post.id);
+   
+						  postContainer.append(postContent);
+						}
+   
+						feedContainer.append(postContainer);
+					}
+   
+					// Slick slider
+					feedContainer.slick({
+						infinite: true,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						autoplay: true,
+						autoplaySpeed: 5000,
+						responsive: [
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									autoplaySpeed: 3000,
+								},
+							},
+						],
+						pauseOnHover: false,
+						pauseOnFocus: false,
+						// prev & next 버튼에 대한 이미지 작업 필요.
+						prevArrow:
+							'<button type="button" class="slick-prev slick-round-btn"><img src="./img/left_bright.png" alt=""></button>',
+						nextArrow:
+							'<button type="button" class="slick-next slick-round-btn"><img src="./img/right_bright.png" alt=""></button>',
+					});
+				},
+				error: function (error) {
+					console.error("페이스북 데이터를 가져오는데 실패했습니다", error);
+				},
+			});
+			 }
+   
+			 // 초기 로딩 시 업데이트 실행
+			 updateFacebookFeed();
+   
+			 // 하루마다 업데이트 실행
+			 setInterval(updateFacebookFeed, 24 * 60 * 60 * 1000);
+		 </script>
+  </div>
+</div>
+<!------------------------------------ Facebook the last space ------------------------------------>
+<!------------------------------------ instagram  ------------------------------------>
+<script src="/absolute/path/to/instafeed.min.js" type="text/html"></script>
+<div id="instagram_area">
+  <div class="instagram_title">
+	<h2 align="center">Instagram</h2>
+  </div>
+  <div class="instagram_contents" align="center">
+	<div
+	  id="instagram-feed"
+	  class="slick-slider"
+	  style="overflow-x: hidden"
+	></div>
+	<script>
+	  // 토큰
+	  var accessToken =
+		"IGQWRPeFhac241c1lSZAHNoS2tGdTFOeTBnSWRzWEVOak5YNXlfZAk1ZAVmNlQmstT3N5OUlIM1dXWjI4R09GUDB0dDI3eTNyNFh3UWNDWERhWXNQbVB2YW1rbTZAlMFZAZAdDVpR04zalhrSW84aEpCM1VIeXh2dWlod0EZD";
+
+	  // 인스타그램 그래프 API
+	  var apiUrl =
+		"https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&access_token=" +
+		accessToken;
+
+	  // 작성시간 표시 함수
+	  function calculateTimeAgo(timestamp) {
+		var now = new Date();
+		var postDate = new Date(timestamp);
+		var timeDiff = now - postDate;
+		var seconds = Math.floor(timeDiff / 1000);
+		var minutes = Math.floor(seconds / 60);
+		var hours = Math.floor(minutes / 60);
+		var days = Math.floor(hours / 24);
+
+		if (days > 0) {
+		  return days + "일 전";
+		} else if (hours > 0) {
+		  return hours + "시간 전";
+		} else if (minutes > 0) {
+		  return minutes + "분 전";
+		} else {
+		  // 새로운 분기: 하루 전보다 적은 경우
+		  var remainingSeconds = seconds % 60;
+		  return remainingSeconds + "초 전";
+		}
+	  }
+
+	  // 인스타그램 게시물
+	  function fetchInstagramPosts() {
+		$.ajax({
+		  url: apiUrl,
+		  method: "GET",
+		  dataType: "JSON",
+		  success: function (response) {
+			console.log(response);
+
+			var maxPosts = Math.min(response.data.length, 12); // 최대 게시물 수 제한
+			var instaFeed = $("#instagram-feed");
+
+			// 모든 게시물을 위한 단일 컨테이너 생성
+			var $instaContainer = $("<div>").addClass("insta-container");
+
+			for (var i = 0; i < maxPosts; i++) {
+			  var mediaUrl = response.data[i].media_url;
+			  var caption = response.data[i].caption;
+			  var timestamp = response.data[i].timestamp;
+			  var permalink = response.data[i]?.permalink;
+
+			  // 캡션의 최대 줄 수를 제한하고 줄바꿈 추가
+			  var maxCaptionLines = 4;
+			  var captionLines = caption
+				.split("\n")
+				.slice(0, maxCaptionLines);
+			  var formattedCaption = captionLines.join("<br>");
+
+			  // 시간 변환
+			  var timeAgo = calculateTimeAgo(timestamp);
+
+			  // 이미지에 링크 추가
+			  var $imageLink = $("<a>")
+				.attr("href", permalink)
+				.attr("target", "_blank");
+
+			  var $imageContainer = $("<div>")
+				.addClass("insta-image-container")
+				.append(
+				  $imageLink.append($("<img>").attr("src", mediaUrl))
+				);
+
+			  // 타임스탬프와 캡션을 추가합니다.
+			  var $captionContainer = $("<div>").addClass("caption");
+			  $captionContainer.append(
+				'<div class="timestamp">' + timeAgo + "</div>"
+			  );
+
+			  $captionContainer.append(
+				'<a href="' +
+				  permalink +
+				  '" target="_blank">' +
+				  formattedCaption +
+				  "..." +
+				  (captionLines.length < caption.split("\n").length
+					? '<div type="button" class="read-more-button" data-permalink="' +
+					  permalink +
+					  '">더 보기</div>'
+					: "")
+			  );
+
+			  // 클로저 문제 해결을 위해 IIFE (즉시 실행 함수)를 사용합니다.
+			  (function (fullCaption, permalink) {
+				$captionContainer
+				  .find(".read-more-button")
+				  .click(function () {
+					window.open(permalink, "_blank");
+				  });
+			  })(caption, permalink);
+
+			  $imageContainer.append($captionContainer);
+
+			  $instaContainer.append($imageContainer);
+			}
+
+			instaFeed.append($instaContainer);
+
+			// Slick slider
+			$instaContainer.slick({
+			  infinite: true,
+			  slidesToShow: 4,
+			  slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 5000,
+			  initialSlide: 0,
+			  responsive: [
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				  },
+				},
+				{
+				  breakpoint: 1180,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				  },
+				},
+			  ],
+			  pauseOnHover: true,
+			  pauseOnFocus: true,
+			  prevArrow:
+				'<button type="button" class="slick-prev slick-round-btn"><img src="./img/left_bright.png" alt=""></button>',
+			  nextArrow:
+				'<button type="button" class="slick-next slick-round-btn"><img src="./img/right_bright.png" alt=""></button>',
+			});
+		  },
+
+		  error: function (xhr, status, error) {
+			console.error(xhr.responseText);
+		  },
+		});
+	  }
+
+	  // 페이지 로드 시 인스타그램 게시물 가져오기
+	  fetchInstagramPosts();
+
+	  // 인스타그램 게시물 주기적으로 업데이트하기
+	  setInterval(fetchInstagramPosts, 24 * 60 * 60 * 1000);
+	</script>
+  </div>
+</div>
+ <!------------------------------------ instagram  ------------------------------------>
+<!------------------------------------ Youtube the Starting space ------------------------------------>
+<div id="youtube_area">
+  <div class="youtube_title">
+	<h2 align="center">YouTube</h2>
+  </div>
+  <div class="youtube_contents" align="center">
+	<div
+	  id="videos-container"
+	  class="slick-slider"
+	  style="overflow-x: hidden"
+	></div>
+	<script>
+		const apiKey = "AIzaSyD1gDizKlzCvh-D2JyNye4PJFIiGtFio1g";
+		const channelId = "UCzqLquzfuh-mfgu6FVWUAOA";
+
+		const script = document.createElement("script");
+		script.src = "https://apis.google.com/js/api.js";
+		document.head.appendChild(script);
+
+		function fetchAndDisplayVideos() {
+		  script.onload = () => {
+			gapi.load("client", () => {
+			  const videosContainer = document.getElementById("videos-container");
+
+			  gapi.client
+				.init({
+				  apiKey: apiKey,
+				  discoveryDocs: [
+					"https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest",
+				  ],
+				})
+				.then(() => {
+				  return gapi.client.youtube.search.list({
+					part: "snippet",
+					channelId: channelId,
+					type: "video",
+					order: "viewCount",
+					maxResults: 6,
+					fields: "items(id(videoId))", // 필요한 필드만 지정
+				  });
+				})
+				.then((response) => {
+				  response.result.items.forEach((video) => {
+					const videoContainer = document.createElement("div");
+					videoContainer.className = "video-container";
+					videoContainer.innerHTML = `
+									<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${video.id.videoId}" frameborder="0" allowfullscreen></iframe>
+								`;
+					videosContainer.appendChild(videoContainer);
+				  });
+
+				  // Slick 슬라이더 초기화 코드
+				  $(document).ready(function () {
+					$(videosContainer).slick({
+					  infinite: true,
+					  slidesToShow: 3,
+					  slidesToScroll: 1,
+					  autoplay: true,
+					  autoplaySpeed: 5000,
+					  initialSlide: 0,
+					  responsive: [
+						{
+						  breakpoint: 768,
+						  settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+						  },
+						},
+						{
+						  breakpoint: 1180,
+						  settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+						  },
+						},
+					  ],
+					  pauseOnHover: true,
+					  pauseOnFocus: true,
+					  prevArrow:
+						'<button type="button" class="slick-prev slick-round-btn"><img src="./img/left_bright.png" alt=""></button>',
+					  nextArrow:
+						'<button type="button" class="slick-next slick-round-btn"><img src="./img/right_bright.png" alt=""></button>',
+					});
+				  });
+				})
+				.catch((error) => {
+				  console.error("Error loading YouTube API", error);
+				});
+			});
+		  };
+		}
+
+		fetchAndDisplayVideos();
+		setInterval(fetchAndDisplayVideos, 24 * 60 * 60 * 1000);
+
+	</script>
+  </div>
+</div>
+<!------------------------------------ Youtube the last space ------------------------------------>
+<!------------------------------------ SNS the last space ------------------------------------>
